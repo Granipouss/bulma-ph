@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photon</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/bulma-ph.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h4 class="title is-4">Header with actions</h4>
+
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <div class="buttons has-addons">
+                <a class="button is-small is-outlined is-white"><span class="icon is-small"><i class="fa fa-home"></i></span></a>
+                <a class="button is-small is-inverted is-grey900"><span class="icon is-small"><i class="fa fa-folder"></i></span></a>
+                <a class="button is-small is-outlined"><span class="icon is-small"><i class="fa fa-cloud"></i></span></a>
+                <a class="button is-small"><span class="icon is-small"><i class="fa fa-retweet"></i></span></a>
+                <a class="button is-small"><span class="icon is-small"><i class="fa fa-random"></i></span></a>
+              </div>
+            </div>
+            <div class="level-item">
+              <a class="button is-small">
+                <span class="icon">
+                  <i class="fa fa-filter"></i>
+                </span>
+                <span>Filters</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="level-right">
+            <div class="level-item">
+              <a class="button is-small">
+                <span class="icon"><i class="fa fa-volume-up"></i></span>
+                <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="tab-bar">
+        <div class="tab-item">
+          <span class="icon-close-tab"></span>
+          Tab
+        </div>
+        <div class="tab-item active">
+          <span class="icon icon-cancel icon-close-tab"></span>
+          Tab active
+        </div>
+        <div class="tab-item">
+          <span class="icon icon-cancel icon-close-tab"></span>
+          Tab
+        </div>
+        <div class="tab-item tab-item-fixed">
+          <span class="icon">
+            <i class="fa fa-plus"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="traffic-light pull-right has-shadow">
+        <div id="win-expand"></div>
+        <div id="win-minimize"></div>
+        <div id="win-close"></div>
+      </div>
+
+      <div class="window-content">
+        <div class="columns is-pane">
+          <div class="column has-bg-grey100 is-3">
+            <aside class="menu">
+              <p class="menu-label">
+                General
+              </p>
+              <ul class="menu-list">
+                <li><a>Dashboard</a></li>
+                <li><a>Customers</a></li>
+              </ul>
+              <p class="menu-label">
+                Administration
+              </p>
+              <ul class="menu-list">
+                <li><a>Team Settings</a></li>
+                <li>
+                  <a class="is-active">Manage Your Team</a>
+                  <ul>
+                    <li><a>Members</a></li>
+                    <li><a>Plugins</a></li>
+                    <li><a>Add a member</a></li>
+                  </ul>
+                </li>
+                <li><a>Invitations</a></li>
+                <li><a>Cloud Storage Environment Settings</a></li>
+                <li><a>Authentication</a></li>
+              </ul>
+              <p class="menu-label">
+                Transactions
+              </p>
+              <ul class="menu-list">
+                <li><a>Payments</a></li>
+                <li><a>Transfers</a></li>
+                <li><a>Balance</a></li>
+              </ul>
+            </aside>
+          </div>
+
+          <div class="column is-paddingless">
+            <div class="tile is-ancestor is-pane">
+              <div class="tile is-vertical is-8">
+                <div class="tile">
+                  <div class="tile is-parent is-vertical">
+                    <article class="tile is-child">
+                      <p class="title">Vertical...</p>
+                      <p class="subtitle">Top tile</p>
+                    </article>
+                    <article class="tile is-child">
+                      <p class="title">...tiles</p>
+                      <p class="subtitle">Bottom tile</p>
+                    </article>
+                  </div>
+                  <div class="tile is-parent">
+                    <article class="tile is-child">
+                      <p class="title">Middle tile</p>
+                      <p class="subtitle">With an image</p>
+                    </article>
+                  </div>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child">
+                    <div class="buttons">
+                      <a class="button is-small">Small</a>
+                      <a class="button is-large">Big</a>
+                      <a class="button is-text">Text</a>
+                      <a class="button is-rounded">Rounded</a>
+                      <a class="button is-inverted">Invert</a>
+                      <a class="button is-outlined">Outlined</a>
+                      <a class="button is-outlined" disabled>Disabled</a>
+                      <a class="button is-static">Static</a>
+                    </div>
+                    <div class="buttons">
+                      <a class="button is-blue is-small">Small</a>
+                      <a class="button is-blue is-large">Big</a>
+                      <a class="button is-blue is-text">Text</a>
+                      <a class="button is-blue is-rounded">Rounded</a>
+                      <a class="button is-blue is-inverted">Invert</a>
+                      <a class="button is-blue is-outlined">Outlined</a>
+                      <a class="button is-blue is-outlined" disabled>Disabled</a>
+                      <a class="button is-blue is-static">Static</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child">
+                  <div class="content">
+                    <p class="title">Tall tile</p>
+                    <p class="subtitle">With even more content</p>
+                    <div class="content">
+                      CCC
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+        <button class="button">Cancel</button>
+        <button class="button pull-right">Save</button>
+      </footer>
+    </div>
+  </body>
+</html>

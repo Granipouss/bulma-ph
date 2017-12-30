@@ -1,0 +1,36 @@
+{
+  "name": "bulma-ph",
+  "version": "0.1.0",
+  "description": "Bulma and Photon's kid, to make pretty electron apps",
+  "main": "bulma-ph.sass",
+  "style": "bulma-ph/css/bulma-ph.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Granipouss/bulma-ph.git"
+  },
+  "author": "Granipouss <granipouss@gmail.com>",
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma-ph.css css/bulma-ph.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true bulma-ph.sass css/bulma-ph.css",
+    "start": "npm run build-sass -- --watch",
+    "test": "electron test/app.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^4.1.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "bulma": "^0.6.1"
+  },
+  "files": [
+    "css",
+    "sass",
+    "bulma-ph.sass",
+    "LICENSE",
+    "README.md"
+  ]
+}

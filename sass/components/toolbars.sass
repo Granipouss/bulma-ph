@@ -1,0 +1,17 @@
+$toolbar-color: palette(grey, 200) !default
+$toolbar-border: palette(grey, 400) !default
+$toolbar-padding: 0.75rem !default
+
+.toolbar
+  min-height: 12px
+  background: $toolbar-color
+  padding: $toolbar-padding
+  &.toolbar-header
+    +draggable
+    .button
+      +not-draggable
+    border-bottom: 1px solid $toolbar-border
+  &.toolbar-footer
+    border-top: 1px solid $toolbar-border
+  &.is-borderless
+    border: 0

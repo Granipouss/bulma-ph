@@ -1,0 +1,51 @@
+// Tabs
+
+@import "toolbars"
+
+$tab-hover: transparentize(black, 0.9)
+
+.tab-bar
+  display: flex
+  background: $toolbar-color
+  border-bottom: 1px solid $toolbar-border
+  .tab-item
+    position: relative
+    flex: 1
+    padding: 3px
+    font-size: 12px
+    text-align: center
+    border-left: 1px solid $toolbar-border
+    &:first-child
+      border-left: 0
+    &:not(.active)
+      box-shadow: 0 2px 2px $tab-hover inset
+      background: mix($toolbar-color, $toolbar-border)
+    .icon-close-tab
+      @extend .delete
+      @extend .is-small
+      position: absolute
+      top: 50%
+      left: 0.5rem
+      opacity: 0
+      transition: opacity .1s linear, background-color .1s linear
+      border-radius: 3px
+      transform: translateY(-50%)
+      z-index: 10
+    &:after
+      +overlay
+      content: ""
+      background-color: $tab-hover
+      opacity: 0
+      transition: opacity .1s linear
+      z-index: 1
+
+    // Okay, I know... this is nuts but...
+    &:hover:not(.active):after
+      opacity: 1
+    &:hover .icon-close-tab
+      opacity: 1
+    .icon-close-tab:hover
+      background-color: $tab-hover
+
+  .tab-item-fixed
+    flex: none

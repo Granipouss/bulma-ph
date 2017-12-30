@@ -1,0 +1,23 @@
+
+// Colors
+
+@each $colorName, $color in $palette-colors
+  .has-border-#{$colorName}
+    border-color: $color !important
+
+  .has-text-#{$colorName}
+    color: $color !important
+  a.has-text-#{$colorName}
+    &:hover, &:focus
+      color: darken($color, 10%) !important
+
+  .has-bg-#{$colorName}
+    background: $color !important
+    color: findColorInvert($color)
+
+// Other
+
+.is-draggable
+  +draggable
+.is-not-draggable
+  +not-draggable

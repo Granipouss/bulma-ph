@@ -1,0 +1,30 @@
+$traffic-radius:  0.5rem
+$traffic-spacing: 0.3rem
+$traffic-padding: 0.6rem
+
+.traffic-light
+  +not-draggable
+  font-size: 0
+  z-index: 999
+  position: fixed
+  top: $traffic-padding
+  &.pull-right
+    right: $traffic-padding
+  &:not(.pull-right)
+    left: $traffic-padding
+
+  & > div
+    +circle($traffic-radius)
+    margin-left: $traffic-spacing
+    display: inline-block
+    cursor: pointer
+
+  & > #win-close
+    background: palette(red, A400)
+  & > #win-minimize
+    background: palette(yellow, A400)
+  & > #win-expand
+    background: palette(light-green, A400)
+
+  &.has-shadow > div
+    box-shadow: 0 2px 1px transparentize(palette(black), 0.9) inset

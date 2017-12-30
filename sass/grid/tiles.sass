@@ -1,0 +1,46 @@
+@import "columns"
+
+.tile
+  // position: relative
+  align-items: stretch
+  display: block
+  flex-basis: 0
+  flex-grow: 1
+  flex-shrink: 1
+  min-height: min-content
+
+  // Modifiers
+  &.is-ancestor
+    width: calc(100% - #{$column-gap})
+    height: calc(100% - #{$column-gap})
+    margin: $column-gap / 2
+    &.is-gapless
+      margin: 0
+      width: 100%
+      height: 100%
+      & .tile:not(.is-child)
+        margin: 0
+        padding: 0
+    &.is-pane
+      @extend .is-gapless
+      & .is-child
+        border-right: 1px solid $pane-border-color
+        border-bottom: 1px solid $pane-border-color
+
+  &.is-child
+    margin: 0 !important
+    padding: $column-padding
+
+  &.is-parent
+    padding: $column-gap / 2
+  &.is-vertical
+    flex-direction: column
+    & > .tile.is-child:not(:last-child)
+      margin-bottom: $column-gap
+  &:not(.is-child)
+    display: flex
+
+  @for $i from 1 through 12
+    &.is-#{$i}
+      flex: none
+      width: ($i / 12) * 100%
